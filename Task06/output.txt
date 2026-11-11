@@ -1,0 +1,5 @@
+returned value reused (amount * 2): 600.0
+payment: 300.0
+value returned by a print-only function: None
+ten-day total: 917.5
+local: 99 | global: 0

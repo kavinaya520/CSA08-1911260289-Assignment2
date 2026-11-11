@@ -1,0 +1,14 @@
+1. float vs Decimal totals
+       n |          float total |    Decimal total |  float s | Decimal s
+     300 |            152056.72 |       152056.720 |   0.0001 |    0.0008
+    6000 |   3087077.7200000053 |      3087077.720 |   0.0012 |    0.0133
+  150000 |    76516787.26999982 |     76516787.270 |   0.0304 |    0.3333
+
+2. Rounding each payment vs rounding only the total (300 payments of 33.335)
+  round each payment, then add : 10002.00
+  add exactly, round the total : 10000.50
+
+3. Rate table (dictionary) vs recalculation, 150,000 entries, 400 distinct pairs
+  dictionary lookup : 0.0111 s  = 0.07 microseconds per entry
+  recalculation     : 0.2851 s  = 1.90 microseconds per entry
+  pairs stored in the table (k): 400

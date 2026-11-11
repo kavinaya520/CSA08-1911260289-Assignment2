@@ -1,0 +1,27 @@
+Precedence
+  2 ** 3 ** 2 = 512 (right-associative)
+  -2 ** 2     = -4 (** binds tighter than unary minus)
+  (-2) ** 2   = 4
+
+Unexpected results
+  0.1 + 0.2 == 0.3         : False
+  (4.2 - 3.5) / 0.1        = 7.000000000000002
+  round((4.2 - 3.5) / 0.1) = 7
+  -7 // 2                  = -4
+
+round() vs int() vs math.floor() for fat 4.2% and 3.1% (SNF 8.5, 10 litres)
+  fat 4.2: raw=7.000000000000002  round=7  int=7  floor=7
+     round -> rate 32.80  payment 328.00
+     int   -> rate 32.80  payment 328.00
+     floor -> rate 32.80  payment 328.00
+  fat 3.1: raw=-3.999999999999999  round=-4  int=-3  floor=-4
+     round -> rate 28.40  payment 284.00
+     int   -> rate 28.80  payment 288.00
+     floor -> rate 28.40  payment 284.00
+
+Comparison chaining and Boolean operators
+  2.0 <= fat <= 7.0           : True
+  fat >= 2.0 and fat <= 7.0   : True
+  not (2.0 <= 7.5 <= 7.0)     : True
+
+Example (10 L, fat 4.2, snf 8.5): (32.8, 328.0)

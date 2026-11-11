@@ -1,0 +1,6 @@
+BASE_RATE before: 30.0
+BASE_RATE after reassigning: 31.0 (allowed, the UPPER_CASE name is only a warning)
+10 <class 'int'>
+ten <class 'str'>
+before: 3 5
+after : 5 3

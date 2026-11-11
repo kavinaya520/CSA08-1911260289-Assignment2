@@ -1,0 +1,16 @@
+input() returns a str, so we convert it
+int('12') = 12 | float('3.5') = 3.5
+
+What happens with bad text
+  float('8,5') -> ValueError: could not convert string to float: '8,5'
+  float('eight') -> ValueError: could not convert string to float: 'eight'
+
+Handling invalid input
+      text | try/except | str check | check+strip
+     '8.5' |        8.5 |       8.5 |         8.5
+   ' 8.5 ' |        8.5 |      None |         8.5
+     '8,5' |       None |      None |        None
+   'eight' |       None |      None |        None
+
+Formatted output with f-strings
+[   33.40]

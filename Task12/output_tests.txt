@@ -1,0 +1,11 @@
+Test                              Expected    Actual  Result
+Feb, 4.23 fat 8.67 snf, rate         33.40     33.40  Pass
+May, 4.23 fat 8.67 snf, rate         35.75     35.75  Pass
+May, 480 L (no bonus)             17160.00  17160.00  Pass
+May, 540 L (with bonus)           19575.00  19575.00  Pass
+Feb, 540 L (with bonus)           18306.00  18306.00  Pass
+bonus, exactly 500 L                  0.00      0.00  Pass
+bonus, 540 L                        270.00    270.00  Pass
+4.23 and 4.24 pay the same          357.50    357.50  Pass
+rate_card: months 4-6 use SUMMER, other months use NORMAL: Pass
+all asserts passed
